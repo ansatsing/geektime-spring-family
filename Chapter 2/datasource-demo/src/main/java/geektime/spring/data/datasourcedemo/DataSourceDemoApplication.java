@@ -27,13 +27,13 @@ public class DataSourceDemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		showConnection();
-		showData();
+		//showData();
 	}
 
 	private void showConnection() throws SQLException {
 		log.info(dataSource.toString());
 		Connection conn = dataSource.getConnection();
-		log.info(conn.toString());
+		log.info(">>>>>>>>>>show dataSource:\n"+conn.toString());
 		conn.close();
 	}
 
